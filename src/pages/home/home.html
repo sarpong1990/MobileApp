@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      WELCOME TO VVU E-PORTAL
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+    <button ion-button full>Google Search</button>
+<b> VVU is leading you to your promise land
+  We believe in Excellenc, intergrity, service to mankind.
+</b>
+  <p>
+    <ion-slides pager>
+
+      <ion-slide style="background-color: green">
+        <h2>EDUCATION</h2>
+      </ion-slide>
+    
+      <ion-slide style="background-color: blue">
+        <h2>A TOOL</h2>
+      </ion-slide>
+    
+      <ion-slide style="background-color: red">
+        <h2>TO SUCCESS</h2>
+      </ion-slide>
+      <ion-slide style="background-color: rgb(141, 122, 13)">
+          <h2>MY THOUGHT- MY FUTURE</h2>
+        </ion-slide>
+      <ion-slide style="background-color: rgb(10, 156, 71)">
+          <h2>THINK TO GROW RICH</h2>
+        </ion-slide>
+    
+    </ion-slides>
+  </p>
+  <p>
+  <ion-card>
+    <img src="assets/imgs/knust.jpg"/>
+    <div class="card-title">OUR JOY</div>
+    <div class="card-subtitle">is your success</div>
+  </ion-card>
+
+
+</p>
+<div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Vice chancellor
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Pro Vice Chancellor
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/dear.jpg">
+        </ion-thumbnail>
+        <h2>Dr. Abigail</h2>
+      </ion-item>
+      ...
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/pro.jpg">
+        </ion-thumbnail>
+        <h2>Prof. Sarpong</h2>
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+  <button ion-button large>Enroll Now</button>
+  <button ion-button large><ion-icon name="school"></ion-icon></button>
+  
+</ion-content>
